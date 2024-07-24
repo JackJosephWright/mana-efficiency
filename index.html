@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mana Efficiency in Magic: The Gathering</title>
+    <title>Mana Efficiency in Magic: The Gathering </title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Adding Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -19,16 +21,16 @@
         <section>
             <h2>Graph Analysis</h2>
             <p>The following graph illustrates the mean win rate of games with the corresponding mana difference. Although the relationship is not strictly linear, the degree of structure in this data is surprising. Modeling the linear range of this data returns an R-squared value of 0.99. This analysis even excludes the final turn of the game to account for the advantage of the first player getting an extra turn to spend mana.</p>
-            <img src = "plots/win_rate_vs_mana_difference.png", alt = "Win Rate vs. Mana Difference">
+            <img src="plots/win_rate_vs_mana_difference.png" alt="Win Rate vs. Mana Difference">
         </section>
         <section>
             <h2>High-Level Players Spend More Mana</h2>
-            <img src = "plots/avg_total_mana_by_rank.png", alt = "Mana Spent by Rank">
+            <img src="plots/avg_total_mana_by_rank.png" alt="Mana Spent by Rank">
             <p>To investigate the relationship between player rank and mana efficiency, I analyzed the average mana spent by rank on MTG Arena, adjusting for game length and mana curve. The plot below illustrates a clear trend: as player rank increases, so does the average mana spent per turn. This linear increase is consistent across every rank except the lowest rank, likely due to 17lands users starting new accounts. By controlling for curve and game length, it is evident that higher-level players optimize their card sequencing for mana efficiency.</p>
         </section>
         <section>
             <h2>Outcomes by Turn and Efficiency</h2>
-            <img src = "plots/cum_mana_spent_heatmap.png", alt = "Turn by Turn Mana">
+            <img src="plots/cum_mana_spent_heatmap.png" alt="Turn by Turn Mana">
             <p>This plot provides a detailed view of mana efficiency over turns in Magic: The Gathering, illustrating how variability in mana usage correlates with win rates.</p>
             <p>The central line graph illustrates the average mana spent per turn, establishing a baseline measure of efficiency across different phases of the game. The shaded regions around this line indicate the win rate corresponding to the mana spent. The mean mana spent aligns with the average 17Lands win rate of 55%. Deviations from this mean show a consistent pattern: as the distance from the mean increases, the win rate either rises or falls accordingly.</p>
         </section>
