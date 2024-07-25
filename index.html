@@ -3,40 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mana Efficiency in Magic: The Gathering </title>
+    <title>Mana Efficiency in Magic: The Gathering</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Adding Google Fonts for better typography -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    
 </head>
 <body>
     <header>
         <h1>Mana Efficiency in Magic: The Gathering</h1>
         <p>By Jack Wright</p>
+        <a href="https://jackjosephwright.github.io/mtg_main_page/" title="Read more about Magic" style="color: #ff5733; font-size: 1.2em; text-decoration: none;">Read more about Magic</a>
+
     </header>
     <main>
         <section>
             <h2>Introduction</h2>
-            <p>In the Limited format of Magic: The Gathering, there is a notable correlation between mana efficiency (spending the most possible mana on any given turn) and winning. At a high level, we observe a linear correlation between win rate and mana differential over 4.7 million games.</p>
+            <p>In the Limited format of Magic: The Gathering, effective mana utilization—spending the most mana possible each turn—is closely linked to winning. Our analysis of 4.7 million games reveals a strong linear correlation between mana differential and win rate, highlighting the importance of mana efficiency in competitive play.</p>
         </section>
         <section>
             <h2>Graph Analysis</h2>
-            <p>The following graph illustrates the mean win rate of games with the corresponding mana difference. Although the relationship is not strictly linear, the degree of structure in this data is surprising. Modeling the linear range of this data returns an R-squared value of 0.99. This analysis even excludes the final turn of the game to account for the advantage of the first player getting an extra turn to spend mana.</p>
             <img src="plots/win_rate_vs_mana_difference.png" alt="Win Rate vs. Mana Difference">
+            <p>The graph above demonstrates that games with higher mana differentials between players generally have better win rates. Despite some non-linearity, the data shows a strong trend, with an R-squared value of 0.99. This analysis excludes the final turn of the game to account for the advantage of the first player having an additional turn to spend mana.</p>
+
         </section>
         <section>
-            <h2>High-Level Players Spend More Mana</h2>
+            <h2>Mana Spending by Player Rank</h2>
             <img src="plots/avg_total_mana_by_rank.png" alt="Mana Spent by Rank">
-            <p>To investigate the relationship between player rank and mana efficiency, I analyzed the average mana spent by rank on MTG Arena, adjusting for game length and mana curve. The plot below illustrates a clear trend: as player rank increases, so does the average mana spent per turn. This linear increase is consistent across every rank except the lowest rank, likely due to 17lands users starting new accounts. By controlling for curve and game length, it is evident that higher-level players optimize their card sequencing for mana efficiency.</p>
+            <p>Our investigation into mana spending by player rank reveals a clear pattern: higher-ranked players consistently spend more mana per turn, even when accounting for game length and mana curve. This suggests that higher-level players actively choose to spend more mana, optimizing their gameplay for better efficiency.</p>
         </section>
         <section>
-            <h2>Outcomes by Turn and Efficiency</h2>
-            <img src="plots/cum_mana_spent_heatmap.png" alt="Turn by Turn Mana">
-            <p>This plot provides a detailed view of mana efficiency over turns in Magic: The Gathering, illustrating how variability in mana usage correlates with win rates.</p>
-            <p>The central line graph illustrates the average mana spent per turn, establishing a baseline measure of efficiency across different phases of the game. The shaded regions around this line indicate the win rate corresponding to the mana spent. The mean mana spent aligns with the average 17Lands win rate of 55%. Deviations from this mean show a consistent pattern: as the distance from the mean increases, the win rate either rises or falls accordingly.</p>
+            <h2>Turn-by-Turn Efficiency</h2>
+            <img src="plots/cum_mana_spent_heatmap.png" alt="Turn-by-Turn Mana">
+            <p>This heatmap illustrates how mana spending correlates with win rates across all turns of the game. By examining mana usage on each turn, we observe that increased mana expenditure is associated with higher win rates, even if the game does not end on that turn. The central line graph shows the average mana spent per turn, with shaded regions indicating win rates corresponding to mana spent. Deviations from the mean mana spent are linked with fluctuations in win rates, reinforcing the importance of mana efficiency throughout the game.</p>
         </section>
         <section>
             <h2>Strategic Insights</h2>
-            <p>The primary strategic insight from these plots is the bias towards mana efficiency: games where players spend more mana on average per turn tend to have higher win rates, while lower mana expenditure correlates with decreased win rates. Higher-level players consistently spend more mana than their lower-level counterparts, as confirmed by the turn-by-turn mana analysis. Optimizing mana usage each turn is crucial for enhancing strategic play and increasing the chances of winning.</p>
+            <p>Our analysis highlights that players who spend more mana on average per turn tend to have higher win rates. This trend is particularly evident among higher-level players who consistently outspend their opponents, even when controlling for factors like mana curve and card quality. Strategic optimization of mana usage is crucial for improving win rates and achieving success in Magic: The Gathering.</p>
         </section>
     </main>
     <footer>
